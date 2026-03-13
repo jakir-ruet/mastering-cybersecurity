@@ -1,10 +1,13 @@
-## More About Me – [Take a Look!](http://www.mjakaria.me) 
+## More About Me – [Take a Look!](http://www.mjakaria.me)
 
 ### Welcome to Mastering Cybersecurity
+
 Cybersecurity is the practice of protecting systems, networks, and data from digital attacks, unauthorized access, damage, or theft. It’s a vast and evolving field that plays a critical role in IT and DevOps, especially in today’s cloud-driven, interconnected world.
 
 ## Domain 1 `Security Principles`
+
 ### Related Security Terms in Table & Diagram
+
 | **Term**                 | **Scope**             | **Focus**                                      | **Examples**                                            |
 | ------------------------ | --------------------- | ---------------------------------------------- | ------------------------------------------------------- |
 | **Information Security** | Broadest              | Protecting all forms of information            | Locking file cabinets, encrypting data, access policies |
@@ -14,6 +17,7 @@ Cybersecurity is the practice of protecting systems, networks, and data from dig
 ![Set Subset Diagram of Security](/img/security-sets.png)
 
 ### Actual Types of Cybersecurity
+
 | **Type of Cybersecurity**                   | **Focus Area**                                                 |
 | ------------------------------------------- | -------------------------------------------------------------- |
 | **Network Security**                        | Protecting networks, routers, switches, firewalls, IDS/IPS     |
@@ -29,7 +33,9 @@ Cybersecurity is the practice of protecting systems, networks, and data from dig
 | **IoT Security**                            | Protecting Internet of Things (smart devices, sensors, etc.)   |
 
 ### CIA (Confidentiality, Integrity & Availability) Model with Diagram
+
 In cybersecurity and information security, the CIA Triad is a foundational model that outlines the three core principles for protecting information:
+
 | **Component**       | **Meaning**                                  | **Goal**                                                         | **Example**                                                  |
 | ------------------- | -------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------ |
 | **Confidentiality** | Ensure only authorized users can access data | Prevent unauthorized access, leaks, or spying                    | Using encryption, passwords, and access control lists (ACLs) |
@@ -39,7 +45,9 @@ In cybersecurity and information security, the CIA Triad is a foundational model
 ![CIA (Confidentiality, Integrity & Availability) Model with Diagram](/img/cia-triad.png)
 
 ### Opposite of CIA Triad is DAD (Disclosure, Alteration & Destruction)
+
 It's also need to know for security.
+
 | **Component**   | **Meaning**                                             | **Purpose**                  |
 | --------------- | ------------------------------------------------------- | ---------------------------- |
 | **Disclosure**  | Unauthorized access to information                      | Violates **confidentiality** |
@@ -47,6 +55,7 @@ It's also need to know for security.
 | **Destruction** | Unauthorized removal or denial of access to information | Violates **availability**    |
 
 ### IAAA (Identification, Authentication, Authorization, and Accountability)
+
 | **Component**      | **Meaning**                                                         | **Purpose**                                   | **Example**                                                 |
 | ------------------ | ------------------------------------------------------------------- | --------------------------------------------- | ----------------------------------------------------------- |
 | **Identification** | Claiming an identity                                                | Establish *who* the user is                   | Username, user ID, email address                            |
@@ -55,6 +64,7 @@ It's also need to know for security.
 | **Accountability** | Tracing actions to a specific identity and holding them responsible | Ensure user actions can be logged and audited | Logs, user activity tracking, audit trails, non-repudiation |
 
 #### Classification with example
+
 1. Identification, example - Your name, username, ID number, employee number, SSN etc.
 2. Authentication
    - Type 1 Authentication (passwords, pass phrase, PIN, etc.).
@@ -63,11 +73,12 @@ It's also need to know for security.
 3. Authorization, example - it's cover ACL, DAC, MAC, RBAC, ABAC, and RUBAC.
 4. Accountability, example - Traces an Action to a Subject's Identity.
 
-
 ### Privacy
+
 In cybersecurity, privacy refers to the rights and control individuals have over their personal information, including how it is collected, used, stored, and shared.
 
 #### Privacy vs Confidentiality
+
 | **Aspect**         | **Privacy**                                        | **Confidentiality**                                |
 | ------------------ | -------------------------------------------------- | -------------------------------------------------- |
 | **Focus**          | Protecting personal or sensitive information       | Preventing unauthorized access to data             |
@@ -76,13 +87,16 @@ In cybersecurity, privacy refers to the rights and control individuals have over
 | **Example**        | GDPR compliance, cookie consent                    | Encryption, firewalls, access control lists (ACLs) |
 
 ### Risk Management?
+
 Risk management is the process of identifying, assessing, and controlling threats to an organization's digital assets, systems, and data. The goal is to reduce the likelihood and impact of cybersecurity incidents. Risk calculation by following formula;
+
 - `Risk` = `Treat` * `Vulnerability(Likelihood)` Or
-- `Risk` = `Treat` * `Vulnerability(Likelihood)` * `Impact`
-- `Total Risk` = `Treat` * `Vulnerability(Likelihood)` * `Asset Value`
+- `Risk` = `Treat` *`Vulnerability(Likelihood)`* `Impact`
+- `Total Risk` = `Treat` *`Vulnerability(Likelihood)`* `Asset Value`
 - `Residual Risk` = `Total Risk` - `Countermeasures`
 
-#### Steps of Cybersecurity Risk Management.
+#### Steps of Cybersecurity Risk Management
+
 | **Step**                | **Description**                                                           |
 | ----------------------- | ------------------------------------------------------------------------- |
 | **1. Identify Risks**   | Discover vulnerabilities, threats, assets, and potential attack vectors   |
@@ -92,18 +106,20 @@ Risk management is the process of identifying, assessing, and controlling threat
 | **5. Monitor & Review** | Continuously track risk posture and update strategies as threats evolve   |
 
 #### Risk Assessment
+
 - `Qualitative Risk Analysis` – How likely is it to happen and how bad is it if it happens?
 - `Quantitative Risk Analysis` – What will it actually cost us in $? This is fact-based analysis, Total $ value of asset, math is involved.
 
 ![Risk Assessment Process](/img/risk-assessments.png)
 
-##### Qualitative Risk Analysis with the Risk Analysis Matrix.
+##### Qualitative Risk Analysis with the Risk Analysis Matrix
 
 ![Qualitative Risk Analysis with the Risk Analysis Matrix](/img/risk-analysis-matrix.png)
 
 Where, L = Low, M = Medium, H = High, E = Extreme Risk
 
 #### Risk Treatment Strategies
+
 | **Strategy** | **Meaning**                                 | **Example**                                   |
 | ------------ | ------------------------------------------- | --------------------------------------------- |
 | **Avoid**    | Eliminate the risk entirely                 | Shut down unused services                     |
@@ -112,6 +128,7 @@ Where, L = Low, M = Medium, H = High, E = Extreme Risk
 | **Accept**   | Acknowledge the risk and take no action     | Accept low-risk vulnerability due to low cost |
 
 ### (ISC)² Code of Ethics
+
 The (ISC)² Code of Ethics guides the professional behavior of all certified cybersecurity professionals under the (ISC)² organization (e.g., CISSP, SSCP, CCSP). All members and candidates are expected to uphold and promote these ethical standards to protect the public interest, maintain professional integrity, and preserve trust in information systems.
 
 ## Domain 2 Business Continuity, Disaster Recovery, and Incident Response
@@ -122,14 +139,13 @@ The (ISC)² Code of Ethics guides the professional behavior of all certified cyb
 
 ## Domain 5 Security Operations
 
-
 ## With Regards, `Jakir`
 
 [![LinkedIn][linkedin-shield-jakir]][linkedin-url-jakir]
 [![Facebook-Page][facebook-shield-jakir]][facebook-url-jakir]
 [![Youtube][youtube-shield-jakir]][youtube-url-jakir]
 
-### Wishing you a wonderful day! Keep in touch.
+### Wishing you a wonderful day! Keep in touch
 
 <!-- Personal profile -->
 
