@@ -30,7 +30,7 @@ In cybersecurity and information security, the CIA Triad is a foundational model
 | **Integrity**       | Ensure data is accurate and unchanged        | Prevent unauthorized modification or tampering                   | Checksums, hashes (e.g., SHA-256), digital signatures        |
 | **Availability**    | Ensure systems and data are accessible       | Prevent outages and ensure legitimate users can access resources | Redundant servers, load balancing, backups, DDoS protection  |
 
-![CIA (Confidentiality, Integrity & Availability) Model with Diagram](/01-cc/img/domain-1/cia-triad.png)
+![CIA (Confidentiality, Integrity & Availability) Model with Diagram](/01-CC/img/domain-1/cia-triad.png)
 
 ### Opposite of CIA Triad is DAD (Disclosure, Alteration & Destruction)
 
