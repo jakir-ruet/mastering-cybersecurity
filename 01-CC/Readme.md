@@ -12,17 +12,52 @@ The Certified in Cybersecurity (CC) is an entry-level cybersecurity certificatio
 
 ## Domain 1 `Security Principles`
 
-Security principles are the foundational guidelines used to `design`, `implement`, and `manage` secure systems.
+Security principles are the foundational guidelines used to `design`, `implement`, and `manage` secure systems. This chapter is foundational; all other domains build on it.
+
+**Topics**
+
+- Information Security, IT Security, Cybersecurity
+- CIA Triad & IAAA
+- Privacy
+- Risk & Incident Management
+- Access Control
+- Governance, Laws, Regulations
+- ISC² Ethics
+
+### Information Security, IT Security, Cybersecurity
+
+**Information Security:** All information (paper, voice, data, human knowledge).
+**IT Security:** Hard/software + data (servers, networks, computers, firmware).
+**Cybersecurity:** IT Security accessible via the internet.
+
+**Summary Table**
+
+| **Term**                 | **Scope**             | **Focus**                                      | **Examples**                                            |
+| ------------------------ | --------------------- | ---------------------------------------------- | ------------------------------------------------------- |
+| **Information Security** | Broadest              | Protecting all forms of information            | Locking file cabinets, encrypting data, access policies |
+| **IT Security**          | Subset of InfoSec     | Securing IT systems and digital infrastructure | Antivirus, firewalls, system hardening, secure login    |
+| **Cybersecurity**        | Subset of IT Security | Protecting systems from internet-based threats | Phishing protection, DDoS defense, threat hunting, WAF  |
+
+![Set Subset Diagram of Security](/img/security-sets.png)
 
 ### CIA (Confidentiality, Integrity & Availability) Model with Diagram
 
 In cybersecurity and information security, the CIA Triad is a foundational model that outlines the three core principles for protecting information.
 
-#### Confidentiality
+#### Confidentiality - Keep data secret
 
-#### Integrity
+- **Tools:**AES256, SSL/TLS, access control, MFA
+- **Threats:** Social engineering, keyloggers, IoT backdoors
 
-#### Availability
+#### Integrity - Data is not altered, keep accuiracy
+
+- **Tools:** Checksums, message digests (MD5, SHA1/2), digital signatures
+- **Threats:** Code injection, encryption attacks
+
+#### Availability - Data accessible when needed
+
+- **Tools:** IPS/IDS, patch management, redundancy, HA
+- **Threats:** DDoS, hardware failure, application failure
 
 | **Component**       | **Meaning**                                  | **Goal**                                                         | **Example**                                                  |
 | ------------------- | -------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------ |
@@ -34,6 +69,10 @@ In cybersecurity and information security, the CIA Triad is a foundational model
 
 ### Opposite of CIA Triad is DAD (Disclosure, Alteration & Destruction)
 
+- **Disclosure:** Unauthorized access
+- **Alteration:** Data changed
+- **Destruction:** Data or systems destroyed
+
 It's also need to know for security.
 
 | **Component**   | **Meaning**                                             | **Purpose**                  |
@@ -42,7 +81,28 @@ It's also need to know for security.
 | **Alteration**  | Unauthorized modification of information                | Violates **integrity**       |
 | **Destruction** | Unauthorized removal or denial of access to information | Violates **availability**    |
 
-### IAAA (Identification, Authentication, Authorization, and Accountability)
+### IAAA – Identity & Access (Identification, Authentication, Authorization, and Accountability)
+
+- **Identification:** Who you are (username, ID, SSN)
+- **Authentication:** Prove it (MFA recommended)
+  - **Type 1 (Knowledge):** Passwords, PINs, passphrases
+  - **Type 2 (Possession):** ID cards, tokens, single-use passwords
+  - **Type 3 (Biometrics):** Fingerprint, iris, face
+- **Authorization:** What you can access (DAC, MAC, RBAC, ABAC, Context/Content-based)
+- **Accountability:** Track actions → non-repudiation, Traces an Action to a Subject's Identity.
+
+> **Biometric Notes:**
+
+- **Errors:**FRR (False Reject), FAR (False Accept), CER (Crossover Error Rate)
+- **Types:** Physiological (fingerprint, iris), Behavioral (typing rhythm, gait)
+- **Privacy is critical:** biometrics cannot be “replaced” like passwords
+
+> **Notes**
+
+- **DAC** > Discretionary Access Control
+- **MAC** > Mandatory Access Control,
+- **RBAC** > Role-Based Access Control,
+- **ABAC** > Attribute-Based Access Control
 
 | **Component**      | **Meaning**                                                         | **Purpose**                                   | **Example**                                                 |
 | ------------------ | ------------------------------------------------------------------- | --------------------------------------------- | ----------------------------------------------------------- |
@@ -63,7 +123,18 @@ It's also need to know for security.
 
 ### Privacy
 
-In cybersecurity, privacy refers to the rights and control individuals have over their personal information, including how it is collected, used, stored, and shared.
+In cybersecurity, Human right; protection from unauthorized observation or intrusion. Privacy refers to the rights and control individuals have over their personal information, including how it is collected, used, stored, and shared.
+
+**`General Data Protection Regulation` (GDPR):** It is a comprehensive legal framework enacted by the European Union (EU) that governs how organizations collect, process, and protect the personal data of individuals within the EU and the European Economic Area (EEA).
+
+**Individual Rights Under GDPR**
+
+The regulation grants several key rights to individuals, including:
+
+- **Right to Access:** The right to see what data an organization has about them.
+- **Right to Erasure:** Also known as the "right to be forgotten," allowing individuals to ask for their data to be deleted.
+- **Right to Portability:** The right to move their data from one service provider to another.
+- **Right to Rectification:** The right to have inaccurate personal data corrected.
 
 #### Privacy vs Confidentiality
 
@@ -90,6 +161,20 @@ Risk management is the process of identifying, assessing, and controlling threat
 3. `Vulnerability` 👉 Example: open port, weak password
 4. `Impact` 👉 Example: data loss, downtime
 
+#### Risk Lifecycle: Identify → Assess → Respond → Monitor
+
+- **Qualitative:** Likelihood & impact (High/Medium/Low/Extreme)
+- **Quantitative:** Assign numeric cost ($), calculate ALE, SLE, TCO
+- **Risk Response:** Accept, Mitigate, Transfer, Avoid (Never reject)
+
+**Indicators: In Summary Table**
+
+| Acronym | Full Name                 | Purpose                  | Example                                 |
+| ------- | ------------------------- | ------------------------ | --------------------------------------- |
+| KPI     | Key Performance Indicator | Tracks ongoing progress  | Number of sales calls per week          |
+| KGI     | Key Goal Indicator        | Confirms final outcome   | Total annual revenue target             |
+| KRI     | Key Risk Indicator        | Warns of potential risks | Number of cybersecurity breach attempts |
+
 #### Steps of Risk Management
 
 | **Step**                | **Description**                                                           |
@@ -106,7 +191,7 @@ Risk Assessment is the process of evaluating risks to determine their likelihood
 
 ![Risk Assessment Process](/01-CC/img/domain-1/risk-assessments.png)
 
-1. `Qualitative Risk Analysis` It's a subjective method used to `prioritize risks` by `evaluating` their `likelihood` and `impact` using descriptive scales (e.g., `Low`, `Medium`, `High`) rather than numerical data.
+1. **Qualitative Risk Analysis** It's a subjective method used to `prioritize risks` by `evaluating` their `likelihood` and `impact` using descriptive scales (e.g., `Low`, `Medium`, `High`) rather than numerical data.
 
 **Key Characteristics**
 
@@ -139,7 +224,7 @@ Risk Assessment is the process of evaluating risks to determine their likelihood
 - Quick decision-making needed
 - Business-level discussions
 
-1. `Quantitative Risk Analysis` It's a `systematic`, `data-driven` process that evaluates risks by `assigning numerical values`vsuch as monetary `cost`, `time impact`, or `probability` to determine their potential effect on project objectives.
+1. **Quantitative Risk Analysis** It's a `systematic`, `data-driven` process that evaluates risks by `assigning numerical values`vsuch as monetary `cost`, `time impact`, or `probability` to determine their potential effect on project objectives.
 
 It provides an objective and detailed assessment of risk exposure, particularly in complex environments, by applying analytical techniques such as `Monte Carlo simulation` and `Expected Monetary Value` (EMV).
 
@@ -178,6 +263,26 @@ Where, L = Low, M = Medium, H = High, E = Extreme Risk
 | Accuracy  | Lower           | Higher        |
 | Example   | High/Medium/Low | ARO, SLE, ALE |
 
+**Key Characteristics**
+
+- Data-driven and numerical (cost, time, probability)
+- Objective and fact-based
+- Uses mathematical/statistical methods (Monte Carlo, EMV)
+- Produces measurable outputs (ARO, SLE, ALE)
+- Focuses on financial impact
+- Detailed and in-depth analysis
+- Supports decision-making and budgeting
+- Requires time, tools, and reliable data
+
+**When to Use**
+
+- For high-value or critical systems
+- When financial impact needs to be measured
+- In complex projects with many variables
+- When reliable historical data is available
+- For strategic and business decisions
+- After qualitative risk analysis to refine priorities
+
 #### Risk Threatment Strategies
 
 | **Strategy** | **Meaning**                                 | **Example**                                   |
@@ -187,9 +292,182 @@ Where, L = Low, M = Medium, H = High, E = Extreme Risk
 | **Mitigate** | Reduce the impact or likelihood of the risk | Implement firewalls, patch systems            |
 | **Accept**   | Acknowledge the risk and take no action     | Accept low-risk vulnerability due to low cost |
 
-### (ISC)² Code of Ethics
+#### Security Control Categories
 
-The (ISC)² Code of Ethics guides the professional behavior of all certified cybersecurity professionals under the (ISC)² organization (e.g., CISSP, SSCP, CCSP). All members and candidates are expected to uphold and promote these ethical standards to protect the public interest, maintain professional integrity, and preserve trust in information systems.
+1. **Administrative (Managerial) Controls**
+
+- Policies, procedures, guidelines
+- Security awareness training
+- Risk assessments
+- Access control policies
+
+2. **Technical (Logical) Controls**
+
+- Firewalls, IDS/IPS
+- Encryption, MFA
+- Access control systems
+- Antivirus, patch management
+
+3. **Physical Controls**
+
+- Locks, fences, security guards
+- CCTV, biometric access
+- Alarm systems
+- Data center security
+
+4. **Operational Controls**
+
+- Incident response procedures
+- Backup and recovery processes
+- Change management
+- Patch management
+- Monitoring and logging
+- Job rotation and separation of duties
+- Security awareness training
+- Data handling procedures
+
+#### Functional Types of Security Controls
+
+- **Preventive Controls** – stop incidents (firewall, access control)
+- **Detective Controls** – detect incidents (logs, IDS)
+- **Corrective Controls** – fix after incident (backup, patching)
+- **Deterrent Controls** – discourage attacks (warning signs)
+- **Compensating Controls** – alternative when primary control not possible
+- **Recovery Controls** – restore systems (disaster recovery, backups)
+
+#### Access Control Models
+
+| Model                 | Full Name                              | Key Feature / Focus                          | Notes / Example                                                                      |
+| --------------------- | -------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------ |
+| DAC                   | Discretionary Access Control           | Owner discretion; focus on availability      | Users control access to their own resources                                          |
+| MAC                   | Mandatory Access Control               | Labels & clearance; focus on confidentiality | Access based on security labels and clearances                                       |
+| RBAC                  | Role-Based Access Control              | Role-based; focus on integrity               | Users assigned roles with specific permissions                                       |
+| ABAC                  | Attribute-Based Access Control         | Attributes-based; environment-aware          | Access determined by user, resource, and environment attributes                      |
+| Context/Content-based | Context / Content-Based Access Control | Access based on time, location, data content | Example: restricting sensitive data outside office hours or from untrusted locations |
+
+### Governance vs Management
+
+**Governance (C-Level):** Strategy, direction, objectives, risk appetite
+**Management:** Execution, risk tolerance, alignment with governance
+
+> **Key C-Level Roles:** `CEO`, `CIO`, `CTO`, `CSO`, `CISO`, `CFO`
+
+### Laws & Regulations
+
+- **Criminal Law:** Society as victim
+- **Civil Law:** Individuals as victims
+- **Administrative/Regulatory Law:** HIPAA, FDA, FAA, etc.
+- **Private Regulations:** PCI-DSS, Contracts
+- **Religious & Customary Law:** Region-specific conduct rules
+
+> **Notes**
+
+- `HIPAA` – Health Insurance Portability and Accountability Act.
+- `PHI` - Protected Health Information.
+- `ECPA` – Electronic Communications Privacy Act.
+- `PATRIOT` - Providing Appropriate Tools Required to Intercept and Obstruct Terrorism.
+- `CFAA` – Computer Fraud and Abuse Act.
+- `PCI-DSS` – Payment Card Industry Data Security Standard.
+- `GDPR` – General Data Protection Regulation.
+- `FDA` – Food and Drug Administration.
+- `FAA` – Federal Aviation Administration.
+
+### ISC2 Code of Ethics
+
+The ISC2 Code of Ethics is a set of `professional` rules and guidelines for `cybersecurity` professionals.
+
+- It defines `how security practitioners should behave in a professional and ethical way`.
+- It applies to `everyone` holding ISC2 certifications like `CC`, `SSCP` `CISSP`, etc.
+- It ensures actions protect people, organizations, and society while maintaining trust in the cybersecurity profession.
+
+> Key idea: `It’s not just laws—it’s about morality, responsibility, and professionalism in cybersecurity.`
+
+#### The Code has two main parts
+
+1. Preamble - `General Principles`
+2. Four Canons - `Core Rules`
+
+##### Preamble - `General Principles`/`Ethical Foundation`
+
+The preamble emphasizes:
+
+- Protecting `society`, `public trust`, and `infrastructure`
+- Acting with `honesty`, `justice`, `responsibility`
+- Providing `competent` and `diligent service`
+- Advancing the `security` profession
+
+> In simple terms: `Use your cybersecurity skills for good — not harm.`
+
+##### Four Canons - `Core Rules`
+
+###### Canon 1: Protect Society, the Common Good, Public Trust, and Infrastructure
+
+**Meaning:** This is the `highest priority`. Always think about impact on `people` and `society`.
+
+**Key Responsibilities**
+
+- Avoid actions that could harm public systems
+- Report security vulnerabilities responsibly
+- Do not exploit systems for personal gain
+- Protect critical infrastructure (banks, hospitals, govt systems)
+
+> Real-world Example
+If you discover a vulnerability in a banking system → report it responsibly (not exploit it)
+
+###### Canon 2: Act Honorably, Honestly, Justly, Responsibly, and Legally
+
+**Meaning:** Be ethical and lawful in all actions.
+
+**Key Responsibilities**
+
+- Follow laws and regulations
+- Do not engage in hacking without authorization
+- Avoid conflicts of interest
+- Be truthful in reports and communications
+
+> Real-world Example
+
+- Do not falsify security audit results
+- Do not access systems without permission
+
+###### Canon 3: Provide Diligent and Competent Service to Principals
+
+**Meaning:** Do your job `properly` and `professionally`. 👉 `Principals` = your employer, client, or organization
+
+**Key Responsibilities**
+
+- Maintain and improve your skills
+- Give accurate advice
+- Protect client data
+- Deliver quality work
+
+> Real-world Example
+If you are designing a security system → use best practices, not shortcuts
+
+###### Canon 4: Advance and Protect the Profession
+
+**Meaning:** Help improve the cybersecurity field
+
+**Key Responsibilities**
+
+- Share knowledge
+- Support ethical behavior
+- Avoid damaging the reputation of cybersecurity professionals
+- Mentor others
+
+> Real-world Example
+
+- Contribute to open-source security tools
+- Help juniors learn security concepts
+
+##### Easy Way to Remember `Mnemonic: 'SHDP'`
+
+| Canon | Mnemonic | Focus      | Key Idea             |
+| :---: | :------: | ---------- | -------------------- |
+|   1   |    S     | Society    | Protect people first |
+|   2   |    H     | Integrity  | Be legal & honest    |
+|   3   |    D     | Work       | Do your job well     |
+|   4   |    p     | Profession | Improve the field    |
 
 ## Domain 2 Business Continuity Plan `BCP`, Disaster Recovery Plan `DRP`, and Incident Response
 
