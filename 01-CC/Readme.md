@@ -104,7 +104,7 @@ Risk management is the process of identifying, assessing, and controlling threat
 
 Risk Assessment is the process of evaluating risks to determine their likelihood, impact, and priority so organizations can decide how to manage them. `Two` ways measeure risk like
 
-![Risk Assessment Process](/01-cc/img/domain-1/risk-assessments.png)
+![Risk Assessment Process](/01-CC/img/domain-1/risk-assessments.png)
 
 1. `Qualitative Risk Analysis` It's a subjective method used to `prioritize risks` by `evaluating` their `likelihood` and `impact` using descriptive scales (e.g., `Low`, `Medium`, `High`) rather than numerical data.
 
