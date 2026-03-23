@@ -26,9 +26,9 @@ Security principles are the foundational guidelines used to `design`, `implement
 
 ### Information Security, IT Security, Cybersecurity
 
-**Information Security:** All information (paper, voice, data, human knowledge).
-**IT Security:** Hard/software + data (servers, networks, computers, firmware).
-**Cybersecurity:** IT Security accessible via the internet.
+- **Information Security:** All information (paper, voice, data, human knowledge).
+- **IT Security:** Hard/software + data (servers, networks, computers, firmware).
+- **Cybersecurity:** IT Security accessible via the internet.
 
 **Summary Table**
 
@@ -46,7 +46,7 @@ In cybersecurity and information security, the CIA Triad is a foundational model
 
 #### Confidentiality - Keep data secret
 
-- **Tools:**AES256, SSL/TLS, access control, MFA
+- **Tools:** AES256, SSL/TLS, access control, MFA
 - **Threats:** Social engineering, keyloggers, IoT backdoors
 
 #### Integrity - Data is not altered, keep accuiracy
@@ -93,7 +93,7 @@ It's also need to know for security.
 
 > **Biometric Notes:**
 
-- **Errors:**FRR (False Reject), FAR (False Accept), CER (Crossover Error Rate)
+- **Errors:** FRR (False Reject), FAR (False Accept), CER (Crossover Error Rate)
 - **Types:** Physiological (fingerprint, iris), Behavioral (typing rhythm, gait)
 - **Privacy is critical:** biometrics cannot be “replaced” like passwords
 
