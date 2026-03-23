@@ -99,10 +99,10 @@ It's also need to know for security.
 
 > **Notes**
 
-- **DAC** > Discretionary Access Control
-- **MAC** > Mandatory Access Control,
-- **RBAC** > Role-Based Access Control,
-- **ABAC** > Attribute-Based Access Control
+- **DAC** → Discretionary Access Control
+- **MAC** → Mandatory Access Control,
+- **RBAC** → Role-Based Access Control,
+- **ABAC** → Attribute-Based Access Control
 
 | **Component**      | **Meaning**                                                         | **Purpose**                                   | **Example**                                                 |
 | ------------------ | ------------------------------------------------------------------- | --------------------------------------------- | ----------------------------------------------------------- |
@@ -337,13 +337,21 @@ Where, L = Low, M = Medium, H = High, E = Extreme Risk
 
 #### Access Control Models
 
-| Model                 | Full Name                              | Key Feature / Focus                          | Notes / Example                                                                      |
-| --------------------- | -------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------ |
-| DAC                   | Discretionary Access Control           | Owner discretion; focus on availability      | Users control access to their own resources                                          |
-| MAC                   | Mandatory Access Control               | Labels & clearance; focus on confidentiality | Access based on security labels and clearances                                       |
-| RBAC                  | Role-Based Access Control              | Role-based; focus on integrity               | Users assigned roles with specific permissions                                       |
-| ABAC                  | Attribute-Based Access Control         | Attributes-based; environment-aware          | Access determined by user, resource, and environment attributes                      |
-| Context/Content-based | Context / Content-Based Access Control | Access based on time, location, data content | Example: restricting sensitive data outside office hours or from untrusted locations |
+| Model                     | Key Feature / Focus                          | Notes / Example                                                                      |
+| ------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **DAC**                   | Owner discretion; focus on availability      | Users control access to their own resources                                          |
+| **MAC**                   | Labels & clearance; focus on confidentiality | Access based on security labels and clearances                                       |
+| **RBAC**                  | Role-based; focus on integrity               | Users assigned roles with specific permissions                                       |
+| **ABAC**                  | Attributes-based; environment-aware          | Access determined by user, resource, and environment attributes                      |
+| **Context/Content-based** | Access based on time, location, data content | Example: restricting sensitive data outside office hours or from untrusted locations |
+
+> **Notes**
+
+- **DAC** → Discretionary Access Control
+- **MAC** → Mandatory Access Control
+- **RBAC** → Role-Based Access Control
+- **ABAC** → Attribute-Based Access Control
+- **Rule-Based** → Rule-Based Access Control
 
 ### Governance vs Management
 
@@ -473,125 +481,648 @@ If you are designing a security system → use best practices, not shortcuts
 
 ### Business Continuitity Plan
 
-This is the process of creating the long term stategic business plans, sub-plans, policies and procedures for conitinued operation after a distruptive event.
+Long-term strategic plan to ensure continued operations after a disruptive event. Covers the entire organization, not just IT. The purpose lists of disaster scenarios and steps to return to regular operations.
+
+**Iterative Process:** Written ahead of time and continually improved with input from key staff and external consultants.
 
 ![Business Continuitity Plan](/01-CC/img/domain-2/business-continuitity-plan.png)
 
-#### Continuty of Operations Plan `COOP`
+**Senior Management Role**
 
-#### Crisis Communications Plan `CCP`
+- Initiates, approves, and owns the plan.
+- Ensures due diligence and top-down IT security.
 
-![Crisis Communications Plan](/01-CC/img/domain-2/crisis-communications-plan.png)
+### Related Plans included in BCP
 
-#### Cyber Incident Response Plan `CIRO`
+- **COOP (Continuity of Operations Plan):** Alternate site operations, reduced capacity operations for up to 30 days.
+- **CIRP (Cyber Incident Response Plan):** Response to cyber events (DDOS, malware, viruses).
+- **OEP (Occupant Emergency Plan):** Staff/facility protection, evacuation procedures, drills.
+- **BRP (Business Recovery Plan):** Steps to restore normal business operations.
+- **Continuity of Support Plan (IT Contingency Plan):** Focused on IT systems.
+- **CMP (Crisis Management Plan):** Coordination among management during emergencies.
+- **CCP (Crisis Communications Plan):** Internal/external communications, who talks to the press.
 
-#### Ocucupant Emergency Plan `OEP`
+### Offsite Copies & EOC
 
-#### Business Recevery Plan `BRP`
+- Keep digital & physical copies offsite.
+- Emergency Operations Center (EOC) – command/control during disasters.
 
-#### Continuity of Support Plan `CSP`
+### BCP Development Steps
 
-#### Crise Management Plan `CMP`
+- Project Initiation
+- Scope the Project
+- Business Impact Analysis (BIA)
+- Identify Preventive Controls
+- Recovery Strategy
+- Plan Design & Development
+- Implementation, Training & Testing
+- Maintenance (iterative, review/update every 12 months)
 
 ### Disater Recovery Plan
 
-It's a lifecycle of mitigation, preparation, response and recover through IT system.
+Short-term plan to restore critical IT systems after a disaster. Subset of BCP. It focus on IT systems supporting critical business functions.
 
-![Disater Recovery Plan](/01-CC/img/domain-2/disater-recovery-plan.png)
+- **Lifecycle of Disater Recovery Plan**
+  `Mitigation → Preparation → Response → Recovery`
 
-#### Business Impact Plan `BIA`
+  ![Disater Recovery Plan](/01-CC/img/domain-2/disater-recovery-plan.png)
 
-##### Recovery Time Objective `RTO`
+  - `Mitigation:` Reduce likelihood & impact of disaster.
+  - `Preparation:` Build procedures, programs, tools.
+  - `Response:` Follow procedures, notify appropriate staff, contain damage.
+  - `Recovery:` Restore basic and full functionality.
 
-##### Work Recovery Time `WRT`
-
-##### Mean Time Between Failures `MTBF`
-
-##### Mean Time to Repair `MTTR`
-
-##### Minimum Operationg Requirements `MOR`
-
-#### Recovery Point Objective `RPO`
-
-#### Recovery Strategies
-
-##### Redundant Site
-
-##### Hot Site
-
-##### Warm Site
-
-##### Cold Site
-
-##### Reciprocal Agreement Site
-
-##### Subscription/Cloud Site
-
-![Subscription/Cloud Site](/01-CC/img/domain-2/subscription-cloud-site.png)
-
-##### Mobile Site
-
-##### Lessions Learned
+- **Simulated Tests:** DRP Review, Read-through, Walkthrough/Tabletop, Simulation Drill.
+- **Physical Tests:** Partial interruption, failover to secondary systems.
+- **Business Impact Analysis (BIA)** Terms:
+  - **RPO (Recovery Point Objective):** Maximum acceptable data loss.
+  - **RTO (Recovery Time Objective):** Time to restore systems.
+  - **WRT (Work Recovery Time):** Time to configure recovered systems.
+  - **MTD (Maximum Tolerable Downtime):** Maximum downtime before severe impact.
+  - **MTBF (Mean Time Between Failures):** Predict hardware failure frequency.
+  - **MTTR (Mean Time to Repair):** Time to repair failed systems.
+  - **MOR (Minimum Operating Requirements):** Minimum environment & system specs for recovery.
+- **Recovery Strategies:**
+  - **Redundant Site:** Full replication, automatic failover
+  - **Hot Site:** Houses critical systems, near-real-time data.
+  - **Warm Site:** Restores from backups, manual failover (4–24+ hrs).
+  - **Cold Site:** No hardware/backups, manual setup, weeks to recover.
+  - **Reciprocal Agreement Site:** Partner organization shares space.
+  - **Cloud/Subscription Site:** Paid provider hosts minimal/full replica.
+  - **Mobile Site:** Data center on wheels, moveable.
+- **Lessons Learned:**
+  - Focus on improving processes, not blaming.
+  - Updates feed into BCP/DRP improvements.
 
 ### Incident Management
 
-It's monitoring and detecting security events on our systems and how we react in those events.
+Monitoring, detecting, and responding to security events. The purpose of predictable and well-understood responses to events or intrusions.
 
-![Incident Management](/01-CC/img/domain-2/incident-management.png)
-
-- Event - An observe change in state
-- Alerts - Triggers warnings if certain event happens
-- Inconvenience (Non-disasters) - Non-distruptive failures
-- Emergency (Criis) - Urgent
-- Disaster - Our entire facility is unusable for 24 hours/longer
-- Catastrophe - Our facility is destroyed
-
-#### Natural Incident Management
-
-#### Human Incident Management
-
-#### Environmental Incident Management
-
-> Not to be confsed with natural disasters
-
-#### Computer/Cyber Incident Response Tea `CIRT`
-
-##### Senior Management
-
-##### Incident Manager
-
-##### Technical Leads and Teams
-
-##### IT Security
-
-##### PR, Human Resource (HR) and Legal
-
-##### Auditors IT/Financial
+- **Disaster Categories:**
+  - Natural,
+  - Human,
+  - Environmental (same as BCP/DRP).
+- **Event Hierarchy:**
+  - **Event:** Observable change in state (neutral).
+  - **Alert:** Trigger warning for specific events.
+  - **Incident:** Multiple adverse events, often human-caused.
+  - **Problem:** Incident with unknown cause, needs root-cause analysis.
+  - **Inconvenience:** Minor non-disruptive failures.
+  - **Emergency:** Potential loss of life or property.
+  - **Disaster:** Facility unusable ≥24 hours.
+  - **Catastrophe:** Facility destroyed.
+- **CIRT (Cyber Incident Response Team):**
+  - Senior Management,
+  - Incident Manager,
+  - IT Security,
+  - Technical Leads,
+  - Public Relations - PR,
+  - Human Resouce - HR,
+  - Legal,
+  - Auditors.
+- **Incident Response Lifecycle (8 Steps):**
+  1. **Preparation** – Policies, procedures, training, tools.
+  2. **Detection** – Analyze events, use IDS/IPS, correlate across network.
+  3. **Response** – Contain incident, isolate affected systems.
+  4. **Mitigation** – Eradicate threat, patch vulnerabilities.
+  5. **Reporting** – Technical & non-technical updates to management.
+  6. **Recovery** – Restore systems carefully, monitor for persistence.
+  7. **Remediation** – Broader fixes, patch all affected systems.
+  8. **Lessons Learned** – Improve future response, feed into preparation.
+- **Root-Cause Analysis:** Identify underlying weaknesses to prevent recurrence.
 
 ## Domain 3 Access Controls Concepts
 
-### Access Controls Concepts
+### Access Controls
 
-#### Administrative (Directive) Controls
+Access Control is the process of deciding `Who` can access `What` resources and `How` they can use them.
 
-Organizational policies and procedures
+#### Basic Components
 
-#### Physical Controls
+| Component   | Meaning                           |
+| ----------- | --------------------------------- |
+| **Subject** | User / system requesting access   |
+| **Object**  | Resource (file, database, system) |
+| **Action**  | Read, write, execute              |
 
-Locks, Fences, Guards, Dogs, Gates, Bollards
+#### Access Control Process Flow - IAAA
 
-#### Technical Controls
+1. `Identification` → Who are you? (Username)
+2. `Authentication` → Prove it (Password, biometrics)
+3. `Authorization` → What can you access?
+4. `Accounting (Auditing)` → What did you do?
 
-Hardware, Software, Fireware, Firewalls, Routers, Encryptions
+#### Access Control Categories
 
-## Domain 4
+| Type                           | Description                                          | Example                                |
+| ------------------------------ | ---------------------------------------------------- | -------------------------------------- |
+| **Administrative (Directive)** | Policies, procedures, governance (management-level)  | Security policy, training, standards   |
+| **Technical (Logical)**        | Technology-based controls (systems & software)       | Firewall, IAM, encryption              |
+| **Physical**                   | Protect physical environment                         | Locks, guards, CCTV                    |
+| **Operational**                | Day-to-day security procedures carried out by people | Incident response, backups, monitoring |
 
-### Network Security
+#### Access Control Types
 
-![OSI Model](/01-CC/img/domain-4/osi-model.png)
+| Type             | Purpose       | Example        |
+| ---------------- | ------------- | -------------- |
+| **Preventative** | Stop attack   | Firewall       |
+| **Detective**    | Detect attack | IDS            |
+| **Corrective**   | Fix issue     | Patch          |
+| **Recovery**     | Restore       | Backup         |
+| **Deterrent**    | Discourage    | Guard          |
+| **Compensating** | Alternative   | Manual control |
 
-![TCP/IP Model](/01-CC/img/domain-4/tcp-ip-model.png)
+#### Access Control Models (Very Important)
+
+| Model          | Key Idea                                      | Security Focus     | Control Type    | Flexibility            | Real-World Example                     |
+| -------------- | --------------------------------------------- | ------------------ | --------------- | ---------------------- | -------------------------------------- |
+| **DAC**        | Owner decides access                          | Availability       | Identity-based  | High (but less secure) | Linux/Windows file permissions         |
+| **MAC**        | Labels & clearance (no user control)          | Confidentiality    | System-enforced | Very Low (very strict) | Military / Government systems          |
+| **RBAC**       | Access based on job roles                     | Integrity          | Role-based      | Medium                 | AWS IAM roles, enterprise apps         |
+| **ABAC**       | Uses attributes (user, resource, environment) | Flexible (All CIA) | Policy-based    | Very High              | Access based on time, location, device |
+| **Rule-Based** | IF-THEN rules                                 | Depends on rule    | System rules    | Medium                 | Firewalls (allow/deny traffic)         |
+
+> **Notes**
+
+- **DAC** → Discretionary Access Control
+- **MAC** → Mandatory Access Control
+- **RBAC** → Role-Based Access Control
+- **ABAC** → Attribute-Based Access Control
+- **Rule-Based** → Rule-Based Access Control
 
 ## Domain 4 Network Security
 
+### Network Basics
+
+| Concept         | Description                      | Key Point                   |
+| --------------- | -------------------------------- | --------------------------- |
+| **Network**     | Computers sharing data/resources | Foundation of communication |
+| **Simplex**     | One-way communication            | TV broadcast                |
+| **Half-Duplex** | One at a time                    | Walkie-talkie               |
+| **Full-Duplex** | Both directions simultaneously   | Phone call                  |
+| **Baseband**    | Single channel                   | Ethernet                    |
+| **Broadband**   | Multiple channels                | Cable internet              |
+
+### Network Types
+
+| Type    | Full Form                 | Coverage             | Example           |
+| ------- | ------------------------- | -------------------- | ----------------- |
+| **PAN** | Personal Area Network     | Very small           | Bluetooth         |
+| **LAN** | Local Area Network        | Building/campus      | Office network    |
+| **MAN** | Metropolitan Area Network | City                 | City-wide network |
+| **WAN** | Wide Area Network         | Country/global       | Internet          |
+| **GAN** | Global Area Network       | Worldwide mobility   | Mobile networks   |
+| **VPN** | Virtual Private Network   | Secure over internet | Remote access     |
+
+### Switching Types
+
+| Type                  | Description            | Key Point              |
+| --------------------- | ---------------------- | ---------------------- |
+| **Circuit Switching** | Dedicated path         | Reliable, expensive    |
+| **Packet Switching**  | Data in packets        | Efficient, widely used |
+| **QoS**               | Traffic prioritization | Used for VoIP          |
+
+### OSI Model (Very Important)
+
+| Layer | Name         | Key Function           | Examples     |
+| ----- | ------------ | ---------------------- | ------------ |
+| 7     | Application  | User interface         | HTTP, FTP    |
+| 6     | Presentation | Encryption, formatting | SSL/TLS      |
+| 5     | Session      | Connection control     | Session mgmt |
+| 4     | Transport    | End-to-end delivery    | TCP, UDP     |
+| 3     | Network      | Routing                | IP, ICMP     |
+| 2     | Data Link    | MAC addressing         | Ethernet     |
+| 1     | Physical     | Hardware transmission  | Cables       |
+
+### TCP/IP Model
+
+| Layer          | Maps to OSI | Function                 |
+| -------------- | ----------- | ------------------------ |
+| Application    | OSI 5–7     | User services            |
+| Transport      | OSI 4       | End-to-end communication |
+| Internet       | OSI 3       | Routing (IP)             |
+| Network Access | OSI 1–2     | Physical transmission    |
+
+### IP Address & Ports
+
+| Concept         | Description         |
+| --------------- | ------------------- |
+| **IP Address**  | Identifies device   |
+| **Port**        | Identifies service  |
+| **MAC Address** | Hardware identifier |
+
+### Port Ranges
+
+| Range       | Type       |
+| ----------- | ---------- |
+| 0–1023      | Well-known |
+| 1024–49151  | Registered |
+| 49152–65535 | Dynamic    |
+
+### Common Ports (Important)
+
+| Port  | Protocol | Use                 |
+| ----- | -------- | ------------------- |
+| 20/21 | FTP      | File transfer       |
+| 22    | SSH      | Secure remote login |
+| 23    | Telnet   | Insecure login      |
+| 25    | SMTP     | Email sending       |
+| 80    | HTTP     | Web                 |
+| 110   | POP3     | Email receive       |
+| 143   | IMAP     | Email access        |
+| 443   | HTTPS    | Secure web          |
+| 3389  | RDP      | Remote desktop      |
+
+### IPv4 vs IPv6
+
+| Feature       | IPv4         | IPv6                          |
+| ------------- | ------------ | ----------------------------- |
+| Size          | 32-bit       | 128-bit                       |
+| Format        | Decimal      | Hexadecimal                   |
+| Address Count | ~4.3 billion | Massive (virtually unlimited) |
+| Security      | Added later  | Built-in (IPSec)              |
+
+### Key Protocols
+
+| Protocol  | Function             | Risk          |
+| --------- | -------------------- | ------------- |
+| **ARP**   | IP → MAC mapping     | ARP poisoning |
+| **ICMP**  | Ping/troubleshooting | Recon attacks |
+| **DHCP**  | Assign IP            | Rogue DHCP    |
+| **HTTP**  | Web (unencrypted)    | Sniffing      |
+| **HTTPS** | Secure web           | Safer         |
+
+### Transport Protocols
+
+| Protocol | Type                | Use Case        | Key Feature |
+| -------- | ------------------- | --------------- | ----------- |
+| **TCP**  | Connection-oriented | Web, email      | Reliable    |
+| **UDP**  | Connectionless      | VoIP, streaming | Fast        |
+
+### Network Attacks
+
+| Attack            | Description             |
+| ----------------- | ----------------------- |
+| **SYN Flood**     | Half-open TCP attack    |
+| **Smurf**         | ICMP flood              |
+| **Fraggle**       | UDP flood               |
+| **ARP Poisoning** | Fake MAC mapping        |
+| **MITM**          | Intercept communication |
+
+### Network Cables
+
+| Type      | Description       | Pros         | Cons      |
+| --------- | ----------------- | ------------ | --------- |
+| **UTP**   | Unshielded copper | Cheap        | EMI risk  |
+| **STP**   | Shielded copper   | Less EMI     | Expensive |
+| **Fiber** | Light-based       | Fast, secure | Costly    |
+
+### Cable Issues
+
+| Issue           | Meaning                   |
+| --------------- | ------------------------- |
+| **EMI**         | Signal interference       |
+| **Crosstalk**   | Signal leakage            |
+| **Attenuation** | Signal loss over distance |
+
+### LAN Topologies (Very Important)
+
+| Topology | Structure               | Advantage       | Disadvantage                  |
+| -------- | ----------------------- | --------------- | ----------------------------- |
+| **Bus**  | Single cable line       | Simple, cheap   | Single failure breaks network |
+| **Ring** | Circular connection     | Organized flow  | Failure affects entire ring   |
+| **Star** | Central device (switch) | Fault isolation | Central device failure        |
+| **Mesh** | Interconnected nodes    | High redundancy | Expensive, complex            |
+| **Tree** | Hierarchical            | Scalable        | Depends on root               |
+
+### Wi-Fi Basics
+
+| Concept           | Description                    |
+| ----------------- | ------------------------------ |
+| Wi-Fi             | Wireless LAN using IEEE 802.11 |
+| Access Point (AP) | Connects wireless devices      |
+| WLAN              | Wireless Local Area Network    |
+| Frequency         | 2.4 GHz / 5 GHz                |
+
+### Wi-Fi Attacks
+
+| Attack    | Description         | Impact               |
+| --------- | ------------------- | -------------------- |
+| Rogue AP  | Unauthorized AP     | Confidentiality risk |
+| Evil Twin | Fake AP (same name) | Data theft           |
+| Jamming   | Signal interference | Availability loss    |
+
+### Wireless Technologies
+
+| Technology              | Range   | Speed     | Key Feature     |
+| ----------------------- | ------- | --------- | --------------- |
+| **Bluetooth**           | 10–100m | Low       | PAN connections |
+| **Li-Fi**               | Short   | Very high | Uses light      |
+| **Zigbee**              | 10–100m | Low       | IoT devices     |
+| **Satellite**           | Global  | Medium    | High latency    |
+| **Cellular (3G/4G/5G)** | Wide    | High      | Mobile networks |
+
+### Cellular Generations
+
+| Generation | Speed     | Latency  |
+| ---------- | --------- | -------- |
+| 3G         | ~2 Mbps   | High     |
+| 4G         | ~200 Mbps | Medium   |
+| 5G         | 5–20 Gbps | Very low |
+
+### Types of Hackers
+
+| Type          | Description        |
+| ------------- | ------------------ |
+| White Hat     | Ethical hacker     |
+| Black Hat     | Malicious attacker |
+| Grey Hat      | In-between         |
+| Script Kiddie | Low skill attacker |
+
+### Attack Sources
+
+| Type       | Description                 |
+| ---------- | --------------------------- |
+| Insider    | Authorized user misuse      |
+| Outsider   | External attacker           |
+| Hacktivist | Political/social motive     |
+| Government | State-sponsored attacks     |
+| Botnet     | Network of infected devices |
+
+### Malware Types
+
+| Type   | Description            |
+| ------ | ---------------------- |
+| Virus  | Needs user action      |
+| Worm   | Self-spreading         |
+| Trojan | Hidden malware         |
+| RAT    | Remote control malware |
+
+### IDS vs IPS
+
+| Feature  | IDS         | IPS            |
+| -------- | ----------- | -------------- |
+| Action   | Detect only | Detect + Block |
+| Mode     | Passive     | Active         |
+| Response | Alert       | Prevent attack |
+
+### Detection Methods
+
+| Method    | Description    | Weakness           |
+| --------- | -------------- | ------------------ |
+| Signature | Known patterns | Misses new attacks |
+| Heuristic | Behavior-based | False positives    |
+| Hybrid    | Both           | More complex       |
+
+### Detection Results
+
+| Type           | Meaning                   |
+| -------------- | ------------------------- |
+| True Positive  | Attack detected correctly |
+| True Negative  | Normal traffic allowed    |
+| False Positive | Normal flagged as attack  |
+| False Negative | Attack missed !           |
+
+### Security Systems
+
+| System | Function                 |
+| ------ | ------------------------ |
+| SIEM   | Collects & analyzes logs |
+| SOAR   | Automates response       |
+
+### Honeypots & Honeynets
+
+| Type     | Description                   |
+| -------- | ----------------------------- |
+| Honeypot | Fake system to trap attackers |
+| Honeynet | Network of honeypots          |
+
+### Firewalls (Very Important)
+
+| Type             | Layer       | Function          |
+| ---------------- | ----------- | ----------------- |
+| Packet Filtering | L1–L3       | Basic filtering   |
+| Stateful         | L1–L4       | Tracks sessions   |
+| Application      | L7          | Deep inspection   |
+| NGFW             | Multi-layer | Advanced security |
+
+### Firewall Design
+
+| Concept          | Description                      |
+| ---------------- | -------------------------------- |
+| DMZ              | Isolated external-facing network |
+| Fail Closed      | Blocks traffic on failure        |
+| Proxy            | Acts on behalf of client         |
+| Host Firewall    | Protects single device           |
+| Network Firewall | Protects network                 |
+
+### 0-Day Attacks & Exploits
+
+| **Term**                | **Definition**                   | **Key Point**          |
+| ----------------------- | -------------------------------- | ---------------------- |
+| **0-day Vulnerability** | Unknown or undisclosed weakness  | No patch available yet |
+| **0-day Exploit**       | Code that uses the vulnerability | Used by attackers      |
+| **0-day Attack**        | Actual attack using exploit      | Happens before fix     |
+
+### Stuxnet Summary
+
+| **Component** | **Function**                |
+| ------------- | --------------------------- |
+| Worm          | Spreads and executes attack |
+| Link file     | Auto-executes the worm      |
+| Rootkit       | Hides malware activity      |
+| USB Infection | Initial entry point         |
+| PLC Attack    | Modifies industrial systems |
+
+### Virtualization
+
+| **Concept**         | **Description**                  | **Example**        |
+| ------------------- | -------------------------------- | ------------------ |
+| Virtualization      | Multiple systems on one hardware | VMware             |
+| Hypervisor Type 1   | Runs on hardware                 | Data centers       |
+| Hypervisor Type 2   | Runs on OS                       | Personal PC        |
+| VM Escape           | Attack between VMs               | Security risk      |
+| Resource Exhaustion | Overuse of CPU/RAM               | Availability issue |
+
+### Cloud Computing Types
+
+| **Type**        | **Description**           | **Example Use**                |
+| --------------- | ------------------------- | ------------------------------ |
+| Private Cloud   | Owned by one organization | Bank systems                   |
+| Public Cloud    | Shared services           | AWS, Google Cloud              |
+| Hybrid Cloud    | Mix of private + public   | Sensitive + non-sensitive data |
+| Community Cloud | Shared by similar orgs    | Government agencies            |
+
+### Cloud Service Models
+
+| **Model** | **Provider Gives** | **User Controls** |
+| --------- | ------------------ | ----------------- |
+| IaaS      | Hardware           | OS & apps         |
+| PaaS      | Hardware + OS      | Apps              |
+| SaaS      | Everything         | Just usage        |
+
+### Distributed & Modern Computing
+
+| **Type**           | **Description**                         |
+| ------------------ | --------------------------------------- |
+| Distributed System | Multiple systems act as one             |
+| HPC                | High-speed computation (supercomputers) |
+| Edge Computing     | Processing near user                    |
+| IoT                | Smart connected devices                 |
+
+### Power Issues
+
+| **Term** | **Meaning**        |
+| -------- | ------------------ |
+| Blackout | Long power loss    |
+| Brownout | Low voltage (long) |
+| Sag      | Short low voltage  |
+| Surge    | Long high voltage  |
+| Spike    | Short high voltage |
+
+### Backup Types (Very Important)
+
+| **Type**     | **What it Backs Up** | **Archive Bit** | **Restore Speed** |
+| ------------ | -------------------- | --------------- | ----------------- |
+| Full         | Everything           | Cleared         | Fastest           |
+| Incremental  | Since last backup    | Cleared         | Slow (many files) |
+| Differential | Since last full      | Not cleared     | Faster            |
+| Copy         | Full backup          | Not cleared     | Special use       |
+
+### RAID Levels
+
+| **RAID** | **Technique**     | **Min Disks** | **Feature**        |
+| -------- | ----------------- | ------------- | ------------------ |
+| RAID 0   | Striping          | 2             | Speed only         |
+| RAID 1   | Mirroring         | 2             | Redundancy         |
+| RAID 5   | Striping + Parity | 3             | Speed + redundancy |
+
+### Fire Suppression
+
+| **Method**    | **How it Works**   |
+| ------------- | ------------------ |
+| Remove Heat   | Water              |
+| Remove Oxygen | Gas (FM200, Halon) |
+| Remove Fuel   | Rare               |
+
+### Secure Design Principles
+
+| **Principle**        | **Meaning**                |
+| -------------------- | -------------------------- |
+| Least Privilege      | Minimum access             |
+| Need to Know         | Only required info         |
+| Separation of Duties | Split responsibilities     |
+| Defense in Depth     | Multiple layers            |
+| Zero Trust           | Never trust, always verify |
+| Fail Secure          | Stay secure on failure     |
+
 ## Domain 5 Security Operations
+
+### Cryptography & Hashing
+
+| Topic            | Key Idea                      | Important Points                                                        |
+| ---------------- | ----------------------------- | ----------------------------------------------------------------------- |
+| **Cryptography** | Protect data using encryption | Ensures **Confidentiality, Integrity, Authentication, Non-repudiation** |
+| **Plaintext**    | Original message              | Unencrypted                                                             |
+| **Ciphertext**   | Encrypted message             | Not readable                                                            |
+| **Encryption**   | Plaintext → Ciphertext        | Uses algorithm (cipher)                                                 |
+| **Decryption**   | Ciphertext → Plaintext        | Uses key                                                                |
+| **Symmetric**    | One shared key                | Fast, but key distribution problem                                      |
+| **Asymmetric**   | Public + Private key          | Secure but slow                                                         |
+| **Hybrid**       | Combines both                 | Used in real-world (TLS, HTTPS)                                         |
+| **Hashing**      | One-way function              | Used for **Integrity**                                                  |
+| **Collision**    | Same hash for different data  | Rare but possible                                                       |
+
+### Cryptographic Attacks
+
+| Attack                              | Description                      |
+| ----------------------------------- | -------------------------------- |
+| **Brute Force**                     | Try all possible keys            |
+| **Key Theft**                       | Steal private key                |
+| **MITM - Man-in-the-Middle Attack** | Intercept & modify communication |
+| **Side Channel**                    | Use physical data (power, CPU)   |
+| **Key Stretching**                  | Slows brute-force attacks        |
+
+### Data Handling & Lifecycle
+
+| Stage                | Description                                           |
+| -------------------- | ----------------------------------------------------- |
+| **Data Acquisition** | Create or collect data                                |
+| **Data Use**         | Ensure CIA (Confidentiality, Integrity, Availability) |
+| **Data Archival**    | Store for long-term/legal use                         |
+| **Data Disposal**    | Secure deletion/destruction                           |
+
+### Data States
+
+| State              | Description        |
+| ------------------ | ------------------ |
+| **Data at Rest**   | Stored data        |
+| **Data in Motion** | Data in transit    |
+| **Data in Use**    | Actively used data |
+
+### Data Disposal Methods
+
+| Method                 | Type        | Notes                       |
+| ---------------------- | ----------- | --------------------------- |
+| **Delete/Format**      | Soft        | Recoverable                 |
+| **Overwrite (Clear)**  | Soft        | Harder to recover           |
+| **Sanitization**       | Strong      | Very difficult to recover   |
+| **Purge**              | Very Strong | Not recoverable even in lab |
+| **Degaussing**         | Physical    | Destroys magnetic media     |
+| **Shredding/Crushing** | Physical    | Full destruction            |
+
+### Configuration, Patch & Change Management
+
+| Topic                        | Description                           |
+| ---------------------------- | ------------------------------------- |
+| **Configuration Management** | Secure baseline (hardening systems)   |
+| **Patch Management**         | Apply updates to fix vulnerabilities  |
+| **Change Management**        | Controlled process for system changes |
+
+#### Change Management Flow
+
+- `Identify → Propose → Assess Risk → Approve`
+- `Test → Schedule → Notify → Implement → Review`
+
+### Access Control (Quick Recap)
+
+| Type                           | Description                                          | Example                                |
+| ------------------------------ | ---------------------------------------------------- | -------------------------------------- |
+| **Administrative (Directive)** | Policies, procedures, governance (management-level)  | Security policy, training, standards   |
+| **Technical (Logical)**        | Technology-based controls (systems & software)       | Firewall, IAM, encryption              |
+| **Physical**                   | Protect physical environment                         | Locks, guards, CCTV                    |
+| **Operational**                | Day-to-day security procedures carried out by people | Incident response, backups, monitoring |
+
+| Type             | Example             |
+| ---------------- | ------------------- |
+| **Preventative** | Firewall            |
+| **Detective**    | IDS                 |
+| **Corrective**   | Patch               |
+| **Recovery**     | Backup              |
+| **Deterrent**    | Guard               |
+| **Compensating** | Alternative control |
+
+### Security Policies
+
+| Policy                           | Purpose               |
+| -------------------------------- | --------------------- |
+| **AUP - Acceptable Use Policy**  | Acceptable Use        |
+| **BYOD - Bring Your Own Device** | Personal device rules |
+| **Privacy Policy**               | Data handling rules   |
+| **Password Policy**              | Password requirements |
+
+### Security Awareness vs Training
+
+| Type          | Goal                             |
+| ------------- | -------------------------------- |
+| **Training**  | Teach skills                     |
+| **Awareness** | Change behavior (more important) |
+
+### Social Engineering
+
+| Technique          | Description       |
+| ------------------ | ----------------- |
+| **Phishing**       | Mass email attack |
+| **Spear Phishing** | Targeted attack   |
+| **Whaling**        | Target executives |
+| **Vishing**        | Voice phishing    |
