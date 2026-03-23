@@ -165,7 +165,7 @@ It provides an objective and detailed assessment of risk exposure, particularly 
 
 ##### Qualitative Risk Analysis with the Risk Analysis Matrix
 
-![Qualitative Risk Analysis with the Risk Analysis Matrix](/01-cc/img/domain-1/risk-analysis-matrix.png)
+![Qualitative Risk Analysis with the Risk Analysis Matrix](/01-CC/img/domain-1/risk-analysis-matrix.png)
 
 Where, L = Low, M = Medium, H = High, E = Extreme Risk
 
@@ -197,13 +197,13 @@ The (ISC)² Code of Ethics guides the professional behavior of all certified cyb
 
 This is the process of creating the long term stategic business plans, sub-plans, policies and procedures for conitinued operation after a distruptive event.
 
-![Business Continuitity Plan](/01-cc/img/domain-2/business-continuitity-plan.png)
+![Business Continuitity Plan](/01-CC/img/domain-2/business-continuitity-plan.png)
 
 #### Continuty of Operations Plan `COOP`
 
 #### Crisis Communications Plan `CCP`
 
-![Crisis Communications Plan](/01-cc/img/domain-2/crisis-communications-plan.png)
+![Crisis Communications Plan](/01-CC/img/domain-2/crisis-communications-plan.png)
 
 #### Cyber Incident Response Plan `CIRO`
 
@@ -219,7 +219,7 @@ This is the process of creating the long term stategic business plans, sub-plans
 
 It's a lifecycle of mitigation, preparation, response and recover through IT system.
 
-![Disater Recovery Plan](/01-cc/img/domain-2/disater-recovery-plan.png)
+![Disater Recovery Plan](/01-CC/img/domain-2/disater-recovery-plan.png)
 
 #### Business Impact Plan `BIA`
 
@@ -249,7 +249,7 @@ It's a lifecycle of mitigation, preparation, response and recover through IT sys
 
 ##### Subscription/Cloud Site
 
-![Subscription/Cloud Site](/01-cc/img/domain-2/subscription-cloud-site.png)
+![Subscription/Cloud Site](/01-CC/img/domain-2/subscription-cloud-site.png)
 
 ##### Mobile Site
 
@@ -259,7 +259,7 @@ It's a lifecycle of mitigation, preparation, response and recover through IT sys
 
 It's monitoring and detecting security events on our systems and how we react in those events.
 
-![Incident Management](/01-cc/img/domain-2/incident-management.png)
+![Incident Management](/01-CC/img/domain-2/incident-management.png)
 
 - Event - An observe change in state
 - Alerts - Triggers warnings if certain event happens
@@ -310,9 +310,9 @@ Hardware, Software, Fireware, Firewalls, Routers, Encryptions
 
 ### Network Security
 
-![OSI Model](/01-cc/img/domain-4/osi-model.png)
+![OSI Model](/01-CC/img/domain-4/osi-model.png)
 
-![TCP/IP Model](/01-cc/img/domain-4/tcp-ip-model.png)
+![TCP/IP Model](/01-CC/img/domain-4/tcp-ip-model.png)
 
 ## Domain 4 Network Security
 
