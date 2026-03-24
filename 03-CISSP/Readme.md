@@ -497,6 +497,62 @@ Privacy is the right of individuals to control their personal information and de
 
 ### Domain 2 Asset Security
 
+#### Asset
+
+Assets refer to everything a company owns, from cash to equipment to intellectual property.
+
+#### Asset Security
+
+Asset Security ensures that valuable assets (data, systems, devices) are properly classified, handled, stored, and protected based on their importance.
+
+#### Asset Classification
+
+| Asset                | Type               | Classification  | Why Important                 |
+| -------------------- | ------------------ | --------------- | ----------------------------- |
+| Customer Database    | Intangible         | Confidential    | Contains PII (very sensitive) |
+| Web Server           | Tangible           | Internal        | Runs application              |
+| Inventory (Products) | Current + Tangible | Internal        | Business operations           |
+| Company Building     | Fixed + Tangible   | Public/Internal | Physical infrastructure       |
+| Brand Name           | Intangible         | Confidential    | Business value                |
+| Shares/Stock/Bond    | Financial          | Internal        | Financial health              |
+
+#### Data Classification
+
+| Level            | Meaning           | Example                 |
+| ---------------- | ----------------- | ----------------------- |
+| **Public**       | Anyone can access | Website content         |
+| **Internal**     | Only employees    | Internal emails         |
+| **Confidential** | Sensitive         | Customer data           |
+| **Restricted**   | Highly sensitive  | Passwords, private keys |
+
+#### IT Asset Management
+
+- `Hardware Asset Management:` Servers, laptops, network devices
+- `Software Asset Management:` OS, applications, licenses
+- `Data & digital resources:` Databases, cloud resources, virtual machines
+
+#### Why IT asset management important
+
+- **Visibility & Control** – Knowing what assets exist allows you to manage and secure them effectively.
+- **Security & Risk Management** – Identifies sensitive or high-risk assets so appropriate protections can be applied.
+- **Compliance & Legal Requirements** – Ensures adherence to software licenses, regulatory standards, and audits.
+- **Cost Optimization** – Helps reduce unnecessary spending by tracking unused or underutilized assets.
+- **Operational Efficiency** – Simplifies maintenance, updates, and assignment of assets to the right users.
+- **Data Protection & Privacy** – Supports secure storage, handling, and disposal of sensitive information.
+- **Supports Strategic Decisions** – Provides insight for future IT investments, capacity planning, and scaling.
+
+#### Asset Ownership
+
+| Role        | Responsibility                                                    |
+| ----------- | ----------------------------------------------------------------- |
+| Asset Owner | Decides classification, approves access, accountable for security |
+| Custodian   | Implements controls, maintains asset operationally                |
+| User        | Uses asset according to policies                                  |
+
+#### Asset valuation
+
+It's determining the monetary or business value of an asset, which helps prioritize security measures and risk management.
+
 ### Domain 3 Security Architecture & Engineering
 
 ### Domain 4 Communication & Network Security
