@@ -1,0 +1,7 @@
+- [Pentest-tools](https://pentest-tools.com/) - Pen testing tool
+- [PeekYou](https://www.peekyou.com/) - a people-search/data aggregation website
+- theHarvester LinkedIn - To collect data from LinkedIn profiles
+- Google Maps and Google Earth
+- theHarvester/Maltego
+- Hunter
+- Using the WWW
